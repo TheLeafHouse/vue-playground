@@ -9,6 +9,15 @@
   <body>
     <div id="root" class="container">
       <playgroundnotification title="Im the Title!">Hello World!</playgroundnotification>
+      <div class="columns">
+        <div v-for="item in items">
+          <div class="column">
+            <img v-show="imageVisible" :src="item.imagelink" :alt="item.imagealt">
+            <h1 class="title" v-show="imageHeaderVisible">{{item.imageheader}}</h1>
+            <h2 class="subtitle" v-show="imageSubeaderVisible" v-if="imageHeaderVisible">{{item.imagesubheader}}</h2>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="assets/vue/vue.js"></script>
     <script src="assets/custom/js/main.js"></script>
