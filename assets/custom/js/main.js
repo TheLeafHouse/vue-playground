@@ -1,6 +1,12 @@
-Vue.component('playgroundheader', {
+Vue.component('playgroundnotification', {
   props: ['title'],
-  template: '<h1>{{title}}</h1>'
+  template: `
+  <div class="notification is-info">
+    <button class="delete"></button>
+    <h3>{{title}}</h3>
+    <p><slot></slot></p>
+  </div>
+  `
 })
 
 var app = new Vue({
